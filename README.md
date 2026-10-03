@@ -72,27 +72,5 @@ python build_notebook.py && jupyter nbconvert --to notebook --execute --inplace 
 ```
 Prices are re-downloaded live, so the numbers can shift slightly if Yahoo revises its data.
 
-## Interview prep
-
-**Why standardise before PCA?** PCA maximises variance. Without scaling, high-volatility stocks such as Adani Enterprises or BSE would dominate the first components just because their returns are bigger, not because they drive co-movement. Scaling each stock to unit variance means PCA runs on the **correlation** matrix, so every stock gets an equal vote.
-
-**What does PC1 represent?** The market factor. All 49 loadings share one sign, so a positive PC1 score means "the whole market is up today". It is basically NIFTY's beta. Loading size measures market sensitivity: Grasim, L&T and SBI are high-beta, while Cipla, Max Healthcare and HUL are defensive. At 29%, it is a little below the 30–40% you often see. Over this window, stock-specific and sector events (Adani/Hindenburg, PSU rally, IT slowdown) took a large share of the variance.
-
-**Why returns and not prices?** Prices are non-stationary: they trend. Any two stocks that both rose over five years will show a high price correlation even with no daily link, which is spurious regression. Returns are roughly stationary, so their correlation measures whether stocks actually move together day to day. That co-movement is what matters for diversification.
-
-**How did you choose the number of clusters?** I combined three things:
-1. The brief's 5–7 range.
-2. The silhouette score. It is low and flat across that range (0.07–0.08), which tells me structure beyond the market factor is real but weak. That is normal for large caps in one market.
-3. Interpretability on the dendrogram. At k = 5, a single 31-stock "everything domestic" cluster remains. k = 7 is the first cut that separates banks, the insurance/hospital/new-age group and domestic cyclicals.
-
-I then checked stability by re-clustering market-neutral residuals (ARI 0.61).
-
-**Why sqrt(2(1−ρ)) and Ward?** For standardised series, this distance equals the Euclidean distance between them, up to a constant. That makes it a proper metric, which Ward linkage needs because it minimises within-cluster variance. ρ = 1 gives distance 0, and ρ = −1 gives the maximum distance of 2.
-
-**How would a portfolio manager use this?**
-- **Real diversification:** owning HDFC Bank, ICICI and Kotak is one bet, not three. Holding HDFC Life alongside a bank adds more diversification than its "Financials" label suggests.
-- **Risk budgets by cluster, not sector:** for example, cap total exposure to the commodities/PSU energy cluster, because NTPC and Power Grid behave like metals.
-- **Hedging and pairs trades:** tight pairs such as Bajaj Finance/Finserv, JSW/Tata Steel and Adani Ent/Ports are natural candidates for pairs trades or relative-value positions.
-- **Factor tilts:** PC2 and PC3 scores give simple defensive-vs-cyclical and export-vs-domestic tilts.
 
 **Limitations to mention:** Correlations change over time. They spike in sell-offs, which is exactly when diversification matters. A rolling-window version, or a separate 2022 drawdown sub-period, would test whether the clusters hold up. Pearson correlation is also sensitive to outliers such as the Adani crash, and the cluster structure here is weak overall (silhouette about 0.08).
