@@ -1,0 +1,276 @@
+{
+  "n_stocks_analysed": 49,
+  "n_days": 1239,
+  "dropped": {
+    "JIOFIN.NS": 0.377
+  },
+  "pc1_var": 0.2899,
+  "pc2_var": 0.0557,
+  "pc3_var": 0.05,
+  "pcs_for_80pct": 25,
+  "pc1_all_same_sign": true,
+  "pc1_top": {
+    "GRASIM": 0.183,
+    "LT": 0.179,
+    "JSWSTEEL": 0.178,
+    "BAJAJFINSV": 0.177,
+    "SBIN": 0.176
+  },
+  "pc1_bottom": {
+    "CIPLA": 0.076,
+    "MAXHEALTH": 0.078,
+    "DRREDDY": 0.095,
+    "ONGC": 0.099,
+    "HINDUNILVR": 0.102
+  },
+  "pc2_pos": {
+    "TCS": 0.315,
+    "INFY": 0.314,
+    "HCLTECH": 0.277,
+    "TECHM": 0.252,
+    "HINDUNILVR": 0.24,
+    "ASIANPAINT": 0.176
+  },
+  "pc2_neg": {
+    "ONGC": -0.273,
+    "COALINDIA": -0.27,
+    "NTPC": -0.267,
+    "POWERGRID": -0.206,
+    "BEL": -0.205,
+    "TATASTEEL": -0.19
+  },
+  "pc3_pos": {
+    "HCLTECH": 0.356,
+    "INFY": 0.354,
+    "TECHM": 0.353,
+    "TCS": 0.334,
+    "ONGC": 0.249,
+    "HINDALCO": 0.209
+  },
+  "pc3_neg": {
+    "MARUTI": -0.183,
+    "HINDUNILVR": -0.172,
+    "ASIANPAINT": -0.172,
+    "EICHERMOT": -0.151,
+    "NESTLEIND": -0.144,
+    "BAJFINANCE": -0.131
+  },
+  "silhouette": {
+    "3": 0.0642,
+    "4": 0.0714,
+    "5": 0.0792,
+    "6": 0.0711,
+    "7": 0.0744,
+    "8": 0.0848,
+    "9": 0.0888,
+    "10": 0.0986
+  },
+  "K": 7,
+  "clusters": [
+    {
+      "cluster": 1,
+      "size": 4,
+      "dominant_sector": "Information Technology",
+      "purity": "100%",
+      "members": "HCLTECH, INFY, TCS, TECHM"
+    },
+    {
+      "cluster": 2,
+      "size": 7,
+      "dominant_sector": "Metals & Mining",
+      "purity": "43%",
+      "members": "COALINDIA, HINDALCO, JSWSTEEL, NTPC, ONGC, POWERGRID, TATASTEEL"
+    },
+    {
+      "cluster": 3,
+      "size": 7,
+      "dominant_sector": "Financial Services",
+      "purity": "100%",
+      "members": "AXISBANK, BAJFINANCE, BAJAJFINSV, HDFCBANK, ICICIBANK, KOTAKBANK, SBIN"
+    },
+    {
+      "cluster": 4,
+      "size": 6,
+      "dominant_sector": "Financial Services",
+      "purity": "50%",
+      "members": "APOLLOHOSP, BSE, ETERNAL, HDFCLIFE, MAXHEALTH, SBILIFE"
+    },
+    {
+      "cluster": 5,
+      "size": 18,
+      "dominant_sector": "Automobile and Auto Components",
+      "purity": "28%",
+      "members": "ADANIENT, ADANIPORTS, ASIANPAINT, BAJAJ-AUTO, BEL, BHARTIARTL, EICHERMOT, GRASIM, INDIGO, LT, M&M, MARUTI, RELIANCE, SHRIRAMFIN, TMPV, TITAN, TRENT, ULTRACEMCO"
+    },
+    {
+      "cluster": 6,
+      "size": 3,
+      "dominant_sector": "Healthcare",
+      "purity": "100%",
+      "members": "CIPLA, DRREDDY, SUNPHARMA"
+    },
+    {
+      "cluster": 7,
+      "size": 4,
+      "dominant_sector": "Fast Moving Consumer Goods",
+      "purity": "100%",
+      "members": "HINDUNILVR, ITC, NESTLEIND, TATACONSUM"
+    }
+  ],
+  "hidden": [
+    {
+      "stock": "BSE",
+      "official_sector": "Financial Services",
+      "home_cluster": 3,
+      "actual_cluster": 4,
+      "actual_cluster_dominant": "Financial Services",
+      "avg_corr_with_sector_mates": 0.231,
+      "avg_corr_with_cluster_mates": 0.205
+    },
+    {
+      "stock": "HDFCLIFE",
+      "official_sector": "Financial Services",
+      "home_cluster": 3,
+      "actual_cluster": 4,
+      "actual_cluster_dominant": "Financial Services",
+      "avg_corr_with_sector_mates": 0.345,
+      "avg_corr_with_cluster_mates": 0.301
+    },
+    {
+      "stock": "SBILIFE",
+      "official_sector": "Financial Services",
+      "home_cluster": 3,
+      "actual_cluster": 4,
+      "actual_cluster_dominant": "Financial Services",
+      "avg_corr_with_sector_mates": 0.34,
+      "avg_corr_with_cluster_mates": 0.289
+    },
+    {
+      "stock": "SHRIRAMFIN",
+      "official_sector": "Financial Services",
+      "home_cluster": 3,
+      "actual_cluster": 5,
+      "actual_cluster_dominant": "Automobile and Auto Components",
+      "avg_corr_with_sector_mates": 0.381,
+      "avg_corr_with_cluster_mates": 0.35
+    },
+    {
+      "stock": "APOLLOHOSP",
+      "official_sector": "Healthcare",
+      "home_cluster": 6,
+      "actual_cluster": 4,
+      "actual_cluster_dominant": "Financial Services",
+      "avg_corr_with_sector_mates": 0.254,
+      "avg_corr_with_cluster_mates": 0.231
+    },
+    {
+      "stock": "MAXHEALTH",
+      "official_sector": "Healthcare",
+      "home_cluster": 6,
+      "actual_cluster": 4,
+      "actual_cluster_dominant": "Financial Services",
+      "avg_corr_with_sector_mates": 0.206,
+      "avg_corr_with_cluster_mates": 0.188
+    },
+    {
+      "stock": "ADANIENT",
+      "official_sector": "Metals & Mining",
+      "home_cluster": 2,
+      "actual_cluster": 5,
+      "actual_cluster_dominant": "Automobile and Auto Components",
+      "avg_corr_with_sector_mates": 0.301,
+      "avg_corr_with_cluster_mates": 0.321
+    },
+    {
+      "stock": "RELIANCE",
+      "official_sector": "Oil Gas & Consumable Fuels",
+      "home_cluster": 2,
+      "actual_cluster": 5,
+      "actual_cluster_dominant": "Automobile and Auto Components",
+      "avg_corr_with_sector_mates": 0.36,
+      "avg_corr_with_cluster_mates": 0.345
+    }
+  ],
+  "n_hidden": 8,
+  "split": [
+    {
+      "stock": "ETERNAL",
+      "sector": "Consumer Services",
+      "cluster": 4
+    },
+    {
+      "stock": "TRENT",
+      "sector": "Consumer Services",
+      "cluster": 5
+    }
+  ],
+  "ari_raw_vs_resid": 0.614,
+  "ari_raw_vs_sector": 0.269,
+  "ari_resid_vs_sector": 0.333,
+  "resid_clusters": {
+    "1": [
+      "HINDALCO",
+      "JSWSTEEL",
+      "TATASTEEL"
+    ],
+    "2": [
+      "ADANIENT",
+      "ADANIPORTS",
+      "BEL",
+      "COALINDIA",
+      "NTPC",
+      "ONGC",
+      "POWERGRID"
+    ],
+    "3": [
+      "HCLTECH",
+      "INFY",
+      "TCS",
+      "TECHM"
+    ],
+    "4": [
+      "AXISBANK",
+      "BAJFINANCE",
+      "BAJAJFINSV",
+      "HDFCBANK",
+      "ICICIBANK",
+      "KOTAKBANK",
+      "SBIN"
+    ],
+    "5": [
+      "BSE",
+      "BAJAJ-AUTO",
+      "BHARTIARTL",
+      "EICHERMOT",
+      "ETERNAL",
+      "GRASIM",
+      "INDIGO",
+      "LT",
+      "M&M",
+      "MARUTI",
+      "RELIANCE",
+      "SHRIRAMFIN",
+      "TMPV",
+      "TITAN",
+      "TRENT",
+      "ULTRACEMCO"
+    ],
+    "6": [
+      "ASIANPAINT",
+      "HINDUNILVR",
+      "ITC",
+      "NESTLEIND",
+      "TATACONSUM"
+    ],
+    "7": [
+      "APOLLOHOSP",
+      "CIPLA",
+      "DRREDDY",
+      "HDFCLIFE",
+      "MAXHEALTH",
+      "SBILIFE",
+      "SUNPHARMA"
+    ]
+  },
+  "mean_pairwise_corr": 0.266
+}
